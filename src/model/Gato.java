@@ -18,7 +18,7 @@ public class Gato extends Animal {
         return calcularDiaria();
     }
  
-    // Getters e Setters
+    
     public boolean isAmbienteEspecial() { return ambienteEspecial; }
     public void setAmbienteEspecial(boolean ambienteEspecial) { this.ambienteEspecial = ambienteEspecial; }
  

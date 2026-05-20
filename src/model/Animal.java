@@ -14,7 +14,7 @@ public abstract class Animal {
  
     public abstract double calcularDiaria();
  
-    // Getters e Setters
+
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
  

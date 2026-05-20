@@ -52,7 +52,6 @@ public class Reserva implements ServicoAdicional {
         System.out.println("TOTAL: R$ " + calcularTotal());
     }
  
-    // Getters e Setters
     public Animal getAnimal() { return animal; }
     public void setAnimal(Animal animal) { this.animal = animal; }
  
