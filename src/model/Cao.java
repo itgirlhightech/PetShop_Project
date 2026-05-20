@@ -11,7 +11,7 @@ public class Cao extends Animal {
  
     @Override
     public double calcularDiaria() {
-        double diaria = 50.0; // base
+        double diaria = 50.0; 
  
         if (getPorte().equalsIgnoreCase("grande")) {
             diaria += 20.0;

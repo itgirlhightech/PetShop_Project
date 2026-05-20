@@ -11,7 +11,7 @@ public class Gato extends Animal {
  
     @Override
     public double calcularDiaria() {
-        return 40.0; // base fixa para gatos
+        return 40.0; 
     }
  
     public double calcularTotal() {

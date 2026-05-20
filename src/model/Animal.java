@@ -3,7 +3,7 @@ package model;
 public abstract class Animal {
  
     private String nome;
-    private String porte; // pequeno, medio, grande
+    private String porte; 
     private int idade;
  
     public Animal(String nome, String porte, int idade) {
