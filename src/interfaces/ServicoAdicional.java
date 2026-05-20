@@ -1,5 +1,9 @@
-package interfaces;
 
-public class ServicoAdicional {
-    
+package interfaces;
+ 
+public interface ServicoAdicional {
+ 
+    double darBanho();           
+    double administrarMedicamento(); 
 }
+ 
