@@ -16,20 +16,19 @@
         <h:panelGrid columns="2">
 
             <h:outputText value="Tipo do Animal"/>
-
-            <h:selectOneMenu value="#{reservaBean.tipoAnimal}">
-                <f:selectItem itemLabel="Selecione"/>
+            <h:selectOneMenu id="tipoAnimal" value="#{reservaBean.tipoAnimal}" required="true"
+                             requiredMessage="Selecione o tipo do animal">
+                <f:selectItem itemLabel="Selecione" itemValue=""/>
                 <f:selectItem itemValue="Cao" itemLabel="Cão"/>
                 <f:selectItem itemValue="Gato" itemLabel="Gato"/>
-
-                <f:ajax listener="#{reservaBean.calcularTotal}"
-                        render="valor"/>
+                <f:ajax listener="#{reservaBean.calcularTotal}" render="valor passeioPanel"/>
             </h:selectOneMenu>
-
+            <h:message for="tipoAnimal" style="color:red"/>
 
             <h:outputText value="Porte"/>
 
-            <h:selectOneMenu value="#{reservaBean.porte}">
+            <h:selectOneMenu id="porte" value="#{reservaBean.porte}" required="true"
+                             requiredMessage="Selecione o porte do animal">
                 <f:selectItem itemValue="Pequeno"/>
                 <f:selectItem itemValue="Médio"/>
                 <f:selectItem itemValue="Grande"/>
@@ -37,7 +36,12 @@
                 <f:ajax listener="#{reservaBean.calcularTotal}"
                         render="valor"/>
             </h:selectOneMenu>
+            <h:message for="porte" style="color:red"/>
 
+            <h:outputText value="Incluir Passeio"/>
+            <h:selectBooleanCheckBox value ="#{reservaBean.includePasseio}" rendered="#{reservaBean.tipoAnimal == 'Cao'}">
+                <f:ajax listener="#{reservaBean.calcularTotal}" render="valor"/>
+            </h:selectBooleanCheckBox>
 
             <h:outputText value="Banho"/>
 
@@ -71,7 +75,8 @@
 
         <h:commandButton
             value="Salvar Reserva"
-            action="#{reservaBean.salvarReserva}"/>
+            action="#{reservaBean.salvarReserva}"
+            styleClass="btn"/>
 
     </h:form>
 

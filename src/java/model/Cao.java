@@ -11,8 +11,7 @@ public class Cao extends Animal {
  
     @Override
     public double calcularDiaria() {
-        double diaria = 50.0; 
- 
+        double diaria = 50.0;
         if (getPorte().equalsIgnoreCase("grande")) {
             diaria += 20.0;
         }
@@ -23,14 +22,12 @@ public class Cao extends Animal {
     public double adicionarPasseio() {
         return incluiPasseio ? 30.0 : 0.0;
     }
- 
-    public double calcularTotal() {
-        return calcularDiaria() + adicionarPasseio();
-    }
- 
+
     // Getters e Setters
     public boolean isIncluiPasseio() { return incluiPasseio; }
-    public void setIncluiPasseio(boolean incluiPasseio) { this.incluiPasseio = incluiPasseio; }
+    public void setIncluiPasseio(boolean incluiPasseio) {
+        this.incluiPasseio = incluiPasseio;
+    }
  
     @Override
     public String toString() {

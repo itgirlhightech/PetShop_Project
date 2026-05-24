@@ -31,7 +31,12 @@ public class Reserva implements ServicoAdicional {
     }
  
     public double calcularTotal() {
-        return animal.calcularDiaria() + darBanho() + administrarMedicamento();
+        double total = animal.calcularDiaria() + darBanho() + administrarMedicamento();
+
+        if (animal instanceof Cao) {
+            total += ((Cao) animal).adicionarPasseio();
+        }
+        return  total;
     }
  
     public String exportarCSV() {

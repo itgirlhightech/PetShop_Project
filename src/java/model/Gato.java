@@ -11,7 +11,11 @@ public class Gato extends Animal {
  
     @Override
     public double calcularDiaria() {
-        return 40.0; 
+        double diaria = 40.0;
+        if (ambienteEspecial) {
+            diaria += 10.0;
+        }
+        return diaria;
     }
  
     public double calcularTotal() {
@@ -20,7 +24,8 @@ public class Gato extends Animal {
  
     
     public boolean isAmbienteEspecial() { return ambienteEspecial; }
-    public void setAmbienteEspecial(boolean ambienteEspecial) { this.ambienteEspecial = ambienteEspecial; }
+    public void setAmbienteEspecial(boolean ambienteEspecial) {
+        this.ambienteEspecial = ambienteEspecial; }
  
     @Override
     public String toString() {
