@@ -21,6 +21,7 @@ Sistema desenvolvido em Java para gerenciamento de reservas de hospedagem para p
 
 ## Estrutura
 
+- diagramas
 - model
 - controller
 - interfaces
