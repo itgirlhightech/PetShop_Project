@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>PetSafe</title>
+</h:head>
+
+<h:body>
+
+    <h2>Reserva PetSafe</h2>
+
+    <h:form>
+
+        <h:panelGrid columns="2">
+
+            <h:outputText value="Tipo do Animal"/>
+
+            <h:selectOneMenu value="#{reservaBean.tipoAnimal}">
+                <f:selectItem itemLabel="Selecione"/>
+                <f:selectItem itemValue="Cao" itemLabel="Cão"/>
+                <f:selectItem itemValue="Gato" itemLabel="Gato"/>
+
+                <f:ajax listener="#{reservaBean.calcularTotal}"
+                        render="valor"/>
+            </h:selectOneMenu>
+
+
+            <h:outputText value="Porte"/>
+
+            <h:selectOneMenu value="#{reservaBean.porte}">
+                <f:selectItem itemValue="Pequeno"/>
+                <f:selectItem itemValue="Médio"/>
+                <f:selectItem itemValue="Grande"/>
+
+                <f:ajax listener="#{reservaBean.calcularTotal}"
+                        render="valor"/>
+            </h:selectOneMenu>
+
+
+            <h:outputText value="Banho"/>
+
+            <h:selectBooleanCheckbox
+                    value="#{reservaBean.banho}">
+
+                <f:ajax listener="#{reservaBean.calcularTotal}"
+                        render="valor"/>
+
+            </h:selectBooleanCheckbox>
+
+
+            <h:outputText value="Medicamento"/>
+
+            <h:selectBooleanCheckbox
+                    value="#{reservaBean.medicamento}">
+
+                <f:ajax listener="#{reservaBean.calcularTotal}"
+                        render="valor"/>
+
+            </h:selectBooleanCheckbox>
+
+        </h:panelGrid>
+
+        <br/>
+
+        <h:outputText id="valor"
+                      value="Valor Total: R$ #{reservaBean.total}"/>
+
+        <br><br/>
+
+        <h:commandButton
+            value="Salvar Reserva"
+            action="#{reservaBean.salvarReserva}"/>
+
+    </h:form>
+
+</h:body>
+
+</html>

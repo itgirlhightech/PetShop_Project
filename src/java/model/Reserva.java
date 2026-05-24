@@ -1,7 +1,7 @@
-package model;
+package java.model;
  
-import interfaces.ServicoAdicional;
- 
+import java.interfaces.ServicoAdicional;
+
 public class Reserva implements ServicoAdicional {
  
     private Animal animal;

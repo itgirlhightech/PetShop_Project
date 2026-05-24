@@ -1,5 +1,5 @@
-package model;
- 
+package java.model;
+
 public class Gato extends Animal {
  
     private boolean ambienteEspecial;

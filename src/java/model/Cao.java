@@ -1,5 +1,5 @@
-package model;
- 
+package java.model;
+
 public class Cao extends Animal {
  
     private boolean incluiPasseio;

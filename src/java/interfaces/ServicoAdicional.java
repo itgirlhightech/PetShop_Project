@@ -1,5 +1,5 @@
 
-package interfaces;
+package java.interfaces;
  
 public interface ServicoAdicional {
  
