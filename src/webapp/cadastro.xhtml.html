@@ -39,9 +39,9 @@
             <h:message for="porte" style="color:red"/>
 
             <h:outputText value="Incluir Passeio"/>
-            <h:selectBooleanCheckBox value ="#{reservaBean.includePasseio}" rendered="#{reservaBean.tipoAnimal == 'Cao'}">
+            <h:selectBooleanCheckbox value ="#{reservaBean.incluiPasseio}" rendered="#{reservaBean.tipoAnimal == 'Cao'}">
                 <f:ajax listener="#{reservaBean.calcularTotal}" render="valor"/>
-            </h:selectBooleanCheckBox>
+            </h:selectBooleanCheckbox>
 
             <h:outputText value="Banho"/>
 
