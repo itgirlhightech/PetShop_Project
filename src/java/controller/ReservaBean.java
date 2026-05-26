@@ -30,7 +30,7 @@ public class ReservaBean implements Serializable {
         if ("Cao".equals(tipoAnimal)) {
             animal = new Cao("Pet", porte, 0, incluiPasseio);
         } else {
-            animal = new Gato("Pet", porte, 0, false);
+            animal = new Gato("Pet", porte, 0);
         }
 
         Reserva reserva = new Reserva(animal, banho, medicamento);
